@@ -48,4 +48,4 @@ SELECT
 	REPLACE(JSON_EXTRACT(`JSONVALUE`, "$.Nome_Departamento"),'"','') AS Departamento
 FROM tb_object_departamento
 WHERE
-	JSON_EXTRACT(`JSONVALUE`, "$.Cpf_Gerente") = "33344555587";
+	JSON_EXTRACT(`JSONVALUE`, "$.Cpf_Gerente") = "33344555587"; 
