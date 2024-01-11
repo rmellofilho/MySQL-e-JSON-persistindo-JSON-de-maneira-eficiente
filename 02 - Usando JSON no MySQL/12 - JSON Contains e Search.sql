@@ -1,0 +1,14 @@
+SELECT Y FROM X;
+
+
+SELECT JSON_CONTAINS(Y, '"2293-3343"', "$.telefone") FROM X;
+SELECT * FROM X WHERE JSON_CONTAINS(Y, '"2293-3343"', "$.telefone") = 1;
+SELECT * FROM X WHERE JSON_EXTRACT(Y, "$.telefone") = '2293-3343';
+
+SELECT JSON_SEARCH(Y, "ONE", "2293-3343"), Y FROM X;
+
+INSERT INTO X VALUES ('{"nome":"Katia", "endereco":"Rua X numero Y", "telefone":"2293-3343", "telefone2":"2293-3343"}');
+SELECT * FROM X;
+
+SELECT JSON_SEARCH(Y, "ONE", "2293-3343"), Y FROM X;
+SELECT JSON_SEARCH(Y, "ALL", "2293-3343"), Y FROM X;
