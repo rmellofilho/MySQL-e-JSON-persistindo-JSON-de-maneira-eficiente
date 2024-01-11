@@ -16,6 +16,7 @@ USE world_x;
 SELECT JSON_EXTRACT(doc, "$.Code") as Code, REPLACE(JSON_EXTRACT(doc, "$.Code"),'"','') as Code2 
 FROM countryinfo;
 
+
 -- Selecionando colunas somando a população e média de expectativa de vida de cada continente
 SELECT
 	JSON_EXTRACT(doc, "$.geography.Continent") as Continent,
