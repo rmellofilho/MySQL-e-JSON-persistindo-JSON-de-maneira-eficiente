@@ -1,0 +1,5 @@
+TRUNCATE X;
+INSERT INTO X VALUES ('{"key1":"value1"}');
+SELECT Y FROM X;
+
+UPDATE X SET Y = JSON_INSERT (Y, "$.key2", "value2");
