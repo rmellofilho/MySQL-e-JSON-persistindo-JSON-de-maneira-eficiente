@@ -1,0 +1,9 @@
+SELECT JSON_PRETTY(JSON) AS dados_json_formatado
+FROM tb_object_funcionario;
+
+
+SELECT T1.NOME_DEPENDENTE, T1.SEXO, T1.PARENTESCO, T1.DATA_NASCIMENTO
+FROM tb_object_funcionario
+JSON_TABLE (JSON_EXTRACT (JSON, "$.Dependentes"), "$.[*]"
+	COLUMNS (
+		NOME_DEPENDENTE VARCHAR(30) PATH "$."
